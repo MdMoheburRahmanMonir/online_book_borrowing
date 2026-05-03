@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react'; 
 import 'animate.css';
 import { TbArrowRampRight } from 'react-icons/tb';
+import Image from 'next/image';
 
 const HeroSection = () => {
     return (
@@ -32,7 +33,7 @@ const HeroSection = () => {
 
                 <div className="md:w-1/2 mt-12 md:mt-0 relative flex justify-center">
                     <div className="relative z-10 w-full max-w-md">
-                        <img
+                        <Image
                             src="/Book-lover-bro.png"
                             alt="Woman reading"
                             className="w-full h-auto"

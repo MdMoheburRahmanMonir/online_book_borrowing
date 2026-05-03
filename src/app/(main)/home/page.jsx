@@ -2,6 +2,7 @@
 import HeroSection from '@/Components/Shared/HeroSection';
 import MembershipPlans from '@/Components/Shared/MembershipPlans';
 import WhyChossUs from '@/Components/Shared/WhyChossUs';
+import Image from 'next/image';
 import Link from 'next/link';
 import { use } from 'react';
 import Marquee from "react-fast-marquee";
@@ -57,7 +58,7 @@ const HomePage = () => {
                             className="p-6 shadow overflow-hidden shadow-[inset_0_2px_10px_rgba(3,3,3,0.8)] hover:shadow-[inset_0_2px_10px_rgba(3,3,3,1)]  shadow-white/20 rounded-2xl hover:shadow hover:shadow-white/50 transition-transform duration-500 ease-in-out hover:scale-105"
                         >
                             <div className='w-full overflow-hidden rounded-2xl'>
-                                <img
+                                <Image
                                     src={book.image_url}
                                     alt={book.title}
                                     className="w-64 h-92 mx-auto hover:scale-105 rounded-r-lg  border-l-[6px] border-l-black/20 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] transition-all duration-500 group-hover:rotate-y-12 group-hover:scale-105 "

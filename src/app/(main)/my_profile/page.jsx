@@ -28,7 +28,7 @@ const MyProfilePage = () => {
                 </CoolMode>
             </div>
             <div>
-                <img src={`${session?.user?.image ? session?.user?.image : '/bookhub.png'}`} width={150} height={150} alt='User image' className=' mx-auto  justify-center rounded-2xl ' />
+                <Image src={`${session?.user?.image ? session?.user?.image : '/bookhub.png'}`} width={150} height={150} alt='User image' className=' mx-auto  justify-center rounded-2xl ' />
             </div>
             <div className='text-2xl'>{session?.user?.name ? session?.user?.name : 'Avatar Name'}</div>
             <div>

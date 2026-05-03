@@ -4,6 +4,7 @@ import { useParams } from 'next/navigation';
 import React, { useContext } from 'react';
 import { authClient } from "@/lib/auth-client"
 import { toast } from 'react-toastify';
+import Image from 'next/image';
 
 const SingleData = () => {
     const { id } = useParams()
@@ -30,7 +31,7 @@ const SingleData = () => {
         <div className="w-11/12 mx-auto py-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white/5 backdrop-blur-md rounded-3xl p-6 lg:p-10 shadow-lg shadow-black/20 border border-white/10">
                 <div className="flex justify-center">
-                    <img
+                    <Image
                         src={image_url}
                         alt={title}
                         className="w-[320px] md:w-[420px] h-auto object-cover rounded-3xl border-l-[10px] border-black/20 shadow-[15px_15px_30px_rgba(0,0,0,0.35)] hover:scale-105 transition-all duration-500"
