@@ -26,21 +26,39 @@ const NavBar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu backdrop-blur-[7px] menu-sm dropdown-content backdrop-blur-[7px] bg-white/[0.2]   rounded-box z-1 mt-3 w-52 p-2  ">
-                        <Link href={'/home'}>
-                            <li className="hover:text-blue-500/[1] w-full  hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full text-white hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
-                                Home
-                            </li>
-                        </Link>
-                        <Link href={'/all_books'}>
-                            <li className="hover:text-blue-500/[1] w-full hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full  text-white  hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
-                                All Books
-                            </li>
-                        </Link>
-                        <Link href={'/my_profile'}>
-                            <li className="hover:text-blue-500/[1] w-full hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full   text-white hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
-                                My Profile
-                            </li>
-                        </Link>
+                        <CoolMode
+                            options={{
+                                particle: "https://i.ibb.co.com/rG3SDh6G/image.png",
+                            }}
+                        >
+                            <Link href={'/home'}>
+                                <li className="hover:text-blue-500/[1] w-full  hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full text-white hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
+                                    Home
+                                </li>
+                            </Link>
+                        </CoolMode>
+                        <CoolMode
+                            options={{
+                                particle: "https://i.ibb.co.com/Dg5kD3WG/image.png",
+                            }}
+                        >
+                            <Link href={'/all_books'}>
+                                <li className="hover:text-blue-500/[1] w-full hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full  text-white  hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
+                                    All Books
+                                </li>
+                            </Link>
+                        </CoolMode>
+                        <CoolMode
+                            options={{
+                                particle: "https://i.ibb.co.com/1t09YbGX/image.png",
+                            }}
+                        >
+                            <Link href={'/my_profile'}>
+                                <li className="hover:text-blue-500/[1] w-full hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full   text-white hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
+                                    My Profile
+                                </li>
+                            </Link>
+                        </CoolMode>
                     </ul>
                 </div>
 
@@ -93,10 +111,10 @@ const NavBar = () => {
                             <Link href={'/my_profile'} className='flex '>
                                 <li className="hover:text-blue-400 flex items-center gap-1 justify-center hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
                                     <CiUser />
-                                    <p> 
-                                        My Profile 
-                                    </p> 
-                                </li> 
+                                    <p>
+                                        My Profile
+                                    </p>
+                                </li>
                             </Link>
                         </CoolMode>
                     </ul>
