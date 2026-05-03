@@ -7,7 +7,7 @@ const MembershipPlans = () => {
     const plans = [
         {
             name: 'Starter',
-            price: '$9',
+            price: '$3',
             duration: 'Weekly',
             features: [
                 '2 Books per month',
@@ -20,7 +20,7 @@ const MembershipPlans = () => {
         },
         {
             name: 'Pro Reader',
-            price: '$19',
+            price: '$12',
             duration: 'Month',
             features: [
                 '5 Books per month',
@@ -34,7 +34,7 @@ const MembershipPlans = () => {
         },
         {
             name: 'Bibliophile',
-            price: '$35',
+            price: '$25',
             duration: 'Yearly',
             features: [
                 '10 Books per month',

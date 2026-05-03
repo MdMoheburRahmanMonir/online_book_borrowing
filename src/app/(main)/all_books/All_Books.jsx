@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { InputGroup } from '@heroui/react';
 import { FaSearch } from 'react-icons/fa';
 import Image from 'next/image';
+import { toast } from 'react-toastify';
 
 const All_Books = () => {
     const [data, setData] = useState([])
@@ -48,7 +49,7 @@ const All_Books = () => {
                             className="p-6  space-y-5 shadow overflow-hidden shadow-[inset_0_2px_10px_rgba(3,3,3,0.8)] hover:shadow-[inset_0_2px_10px_rgba(3,3,3,1)]  shadow-white/20 rounded-2xl hover:shadow hover:shadow-white/50 transition-transform duration-500 ease-in-out hover:scale-105"
                         >
                             <div className='w-full overflow-hidden rounded-2xl'>
-                                <img
+                                <Image
                                     src={book.image_url}
                                     alt={book.title}
                                     
@@ -62,7 +63,7 @@ const All_Books = () => {
                                 Author: {book.author}
                             </p>
                             <Link href={`/category/${book.id}`} className='w-full animate__bounceIn'>
-                                <button className="backdrop-blur-[2px] shadow w-full p-4 shadow-white/[0.2]     hover:shadow hover:shadow-white/[0.2] px-4 py-1 hover:text-blue-400   transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
+                                <button  onClick={() => toast('😀 View Details Selected')} className="backdrop-blur-[2px] shadow w-full p-4 shadow-white/[0.2]     hover:shadow hover:shadow-white/[0.2] px-4 py-1 hover:text-blue-400   transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
                                     View Details
                                 </button>
                             </Link>

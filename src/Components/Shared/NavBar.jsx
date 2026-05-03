@@ -46,7 +46,7 @@ const NavBar = () => {
 
                 <Link href={'/home'} className='justify-self-start'>
                     <div className="text-2xl flex justify-center items-center font-bold  text-blue-600/80 hover:text-blue-600 tracking-tight cursor-pointer">
-                        <img src={'/bookhub2.png'} height={50} width={50} alt='Logo' />
+                        <Image src={'/bookhub2.png'} height={50} width={50} alt='Logo' />
                         <div>
                             Book<span className="text-white/80 hover:text-white ">Hub</span>
                         </div>
