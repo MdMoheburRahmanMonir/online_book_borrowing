@@ -65,8 +65,8 @@ const Footer = () => {
                 </form>
             </section>
             <div className='flex justify-between w-11/12 gap-5 mx-auto text-[12px] px-20 py3'>
-                <p>© 2026 BookHub. All rights reserved.</p>
-                <ul className='flex gap-3 flex-col lg:flex-row'>
+                <p className='text-center'>© 2026 BookHub. All rights reserved.</p>
+                <ul className='hidden md:block lg:block flex gap-3 flex-col lg:flex-row'>
                     <li className='link text-[12px] link-hover text-white/70 hover:text-blue-400'>Privacy Policy </li>
                     <li className='link text-[12px] link-hover text-white/70 hover:text-blue-400'>Terms of Service</li>
                     <li className='link text-[12px] link-hover text-white/70 hover:text-blue-400'>Cookies</li>
