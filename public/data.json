@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "The Silent Forest",
+    "author": "Emma Carter",
+    "description": "A mysterious story about a hidden forest where secrets from the past begin to unfold.",
+    "category": "Story",
+    "available_quantity": 14,
+    "discount": 10,
+    "image_url": "https://i.ibb.co.com/W4M7z9N2/image.png"
+  },
+  {
+    "id": 2,
+    "title": "Mastering JavaScript",
+    "author": "Daniel Brooks",
+    "description": "A practical guide to modern JavaScript development for beginners and professionals.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "discount": 15,
+    "image_url": "https://i.ibb.co.com/KjrHhKnS/image.png"
+  },
+  {
+    "id": 3,
+    "title": "Beyond the Stars",
+    "author": "Sophia Lee",
+    "description": "An exploration of galaxies, black holes, and the mysteries of the universe.",
+    "category": "Science",
+    "available_quantity": 11,
+    "discount": 5,
+    "image_url": "https://i.ibb.co.com/MDZgxrsN/image.png"
+  },
+  {
+    "id": 4,
+    "title": "The Last Kingdom",
+    "author": "Henry Walker",
+    "description": "A thrilling historical story of war, loyalty, and survival.",
+    "category": "Story",
+    "available_quantity": 6,
+    "discount": 20,
+    "image_url": "https://i.ibb.co.com/DP4PcLKq/image.png"
+  },
+  {
+    "id": 5,
+    "title": "AI Revolution",
+    "author": "Nina Patel",
+    "description": "An introduction to artificial intelligence and its impact on the modern world.",
+    "category": "Tech",
+    "available_quantity": 10,
+    "discount": 12,
+    "image_url": "https://i.ibb.co.com/TMHXLMJJ/image.png"
+  },
+  {
+    "id": 6,
+    "title": "Quantum Wonders",
+    "author": "Michael Grant",
+    "description": "A beginner-friendly explanation of quantum physics and cutting-edge discoveries.",
+    "category": "Science",
+    "available_quantity": 7,
+    "discount": 8,
+    "image_url": "https://i.ibb.co.com/5hYznGGv/image.png"
+  },
+  {
+    "id": 7,
+    "title": "Whispers of the Sea",
+    "author": "Olivia Brown",
+    "description": "A heartfelt story of adventure and friendship along the coast.",
+    "category": "Story",
+    "available_quantity": 13,
+    "discount": 18,
+    "image_url": "https://i.ibb.co.com/QFMmwT7m/image.png"
+  },
+  {
+    "id": 8,
+    "title": "Cloud Computing Essentials",
+    "author": "Ryan Mitchell",
+    "description": "Learn the fundamentals of cloud technologies, deployment, and scalability.",
+    "category": "Tech",
+    "available_quantity": 9,
+    "discount": 25,
+    "image_url": "https://i.ibb.co.com/JRQRbVD8/image.png"
+  },
+  {
+    "id": 9,
+    "title": "The Human Brain",
+    "author": "Laura Evans",
+    "description": "Discover how the human brain works and the science behind memory and learning.",
+    "category": "Science",
+    "available_quantity": 5,
+    "discount": 7,
+    "image_url": "https://i.ibb.co.com/0VZnpD3F/image.png"
+  },
+  {
+    "id": 10,
+    "title": "Shadows in the Night",
+    "author": "Ethan Morris",
+    "description": "A suspenseful mystery story filled with twists and unexpected turns.",
+    "category": "Story",
+    "available_quantity": 15,
+    "discount": 30,
+    "image_url": "https://i.ibb.co.com/h1sMHtdg/image.png"
+  },
+  {
+    "id": 11,
+    "title": "Cybersecurity Basics",
+    "author": "Ava Thompson",
+    "description": "An easy-to-understand guide to staying safe in the digital world.",
+    "category": "Tech",
+    "available_quantity": 12,
+    "discount": 14,
+    "image_url": "https://i.ibb.co.com/xSnDV8Bk/image.png"
+  },
+  {
+    "id": 12,
+    "title": "Earth and Evolution",
+    "author": "Chris Anderson",
+    "description": "A scientific journey through Earth's history and the evolution of life.",
+    "category": "Science",
+    "available_quantity": 4,
+    "discount": 9,
+    "image_url": "https://i.ibb.co.com/TqvjQv7K/image.png"
+  },
+  {
+    "id": 13,
+    "title": "Echoes of Destiny",
+    "author": "Grace Miller",
+    "description": "A captivating tale of fate, courage, and unexpected friendships.",
+    "category": "Story",
+    "available_quantity": 9,
+    "discount": 22,
+    "image_url": "https://i.ibb.co.com/MxWKpNyH/image.png"
+  },
+  {
+    "id": 14,
+    "title": "Python for Beginners",
+    "author": "Liam Scott",
+    "description": "Step-by-step guidance to learning Python programming from scratch.",
+    "category": "Tech",
+    "available_quantity": 16,
+    "discount": 17,
+    "image_url": "https://i.ibb.co.com/xKYT5t3D/image.png"
+  },
+  {
+    "id": 15,
+    "title": "Ocean Mysteries",
+    "author": "Isabella Turner",
+    "description": "Dive into the fascinating science and hidden wonders of the deep sea.",
+    "category": "Science",
+    "available_quantity": 7,
+    "discount": 11,
+    "image_url": "https://i.ibb.co.com/1FXwSFC/image.png"
+  },
+  {
+    "id": 16,
+    "title": "Moonlight Secrets",
+    "author": "Noah Bennett",
+    "description": "A dramatic story of hidden truths and unforgettable journeys.",
+    "category": "Story",
+    "available_quantity": 11,
+    "discount": 13,
+    "image_url": "https://i.ibb.co.com/r2YVRhJk/image.png"
+  },
+  {
+    "id": 17,
+    "title": "The Future of Robotics",
+    "author": "Sophia Wilson",
+    "description": "Explore how robotics is transforming industries and daily life.",
+    "category": "Tech",
+    "available_quantity": 10,
+    "discount": 19,
+    "image_url": "https://i.ibb.co.com/vRdxZsv/image.png"
+  },
+  {
+    "id": 18,
+    "title": "Genetics Explained",
+    "author": "Ethan Clark",
+    "description": "An engaging introduction to genes, DNA, and modern biology.",
+    "category": "Science",
+    "available_quantity": 6,
+    "discount": 6,
+    "image_url": "https://i.ibb.co.com/d4rMbcz7/image.png"
+  },
+  {
+    "id": 19,
+    "title": "The Hidden Path",
+    "author": "Mia Robinson",
+    "description": "A fantasy adventure following a group of travelers on a dangerous quest.",
+    "category": "Story",
+    "available_quantity": 8,
+    "discount": 16,
+    "image_url": "https://i.ibb.co.com/mwqyKVf/image.png"
+  },
+  {
+    "id": 20,
+    "title": "Data Science Essentials",
+    "author": "James Turner",
+    "description": "A comprehensive guide to data analysis, machine learning, and visualization.",
+    "category": "Tech",
+    "available_quantity": 14,
+    "discount": 21,
+    "image_url": "https://i.ibb.co.com/5hS1LGpm/image.png"
+  }
+]
