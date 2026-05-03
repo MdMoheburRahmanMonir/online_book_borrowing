@@ -93,10 +93,10 @@ const NavBar = () => {
                             <Link href={'/my_profile'} className='flex '>
                                 <li className="hover:text-blue-400 flex items-center gap-1 justify-center hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
                                     <CiUser />
-                                    <p>
-                                        My Profile
-                                    </p>
-                                </li>
+                                    <p> 
+                                        My Profile 
+                                    </p> 
+                                </li> 
                             </Link>
                         </CoolMode>
                     </ul>
