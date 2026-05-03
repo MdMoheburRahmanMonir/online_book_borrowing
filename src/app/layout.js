@@ -7,7 +7,7 @@ import NavBar from "@/Components/Shared/NavBar";
 import Footer from '@/Components/Shared/Footer';
 import { ToastContainer } from 'react-toastify';
 import { NameContext } from '@/Context/ContextProvider';
-// import { SmoothCursor } from '@/Components/ui/smooth-cursor';
+import { SmoothCursor } from '@/Components/ui/smooth-cursor';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,7 +40,7 @@ export default async function RootLayout({ children }) {
       data-theme='dark'
     >
       <body className="min-h-full flex flex-col !text-white">
-        {/* <SmoothCursor /> */}
+        <SmoothCursor />
         <NameContext value={res}>
           <ToastContainer position="top-left" theme="dark" closeOnClick='true' />
           <NavBar />

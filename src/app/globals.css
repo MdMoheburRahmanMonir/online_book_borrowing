@@ -6,9 +6,9 @@
 @import "@heroui/styles";
 @import "tw-animate-css";
 
-/* * {
+* {
   cursor: none !important;
-} */
+}
 
 input:focus{
     color: white;
