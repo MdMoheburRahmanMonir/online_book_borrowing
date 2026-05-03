@@ -11,7 +11,7 @@ import { IoEye } from "react-icons/io5";
 import { useState } from "react";
 
 export default function Basic() {
-    const [eyeChange, setEyeChange] = useState(true)
+    const [eyeChange, setEyeChange] = useState(false)
     const {
         register,
         handleSubmit,
