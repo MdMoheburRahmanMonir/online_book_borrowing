@@ -48,8 +48,7 @@ const HeroSection = () => {
                     </div>
                     <div className="absolute animate__bounceIn bottom-20 left-0 bg-white p-4 rounded-xl shadow-lg z-20">
                         <p className="text-xs text-gray-400 font-semibold uppercase">Resource</p>
-                        <p className="text-xl font-bold text-gray-900">
-                             
+                        <p className="text-xl font-bold text-gray-900"> 
                             2000+</p>
                     </div>
 

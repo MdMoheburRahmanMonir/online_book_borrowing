@@ -7,8 +7,11 @@ import { useForm } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
+import { IoEye, IoEyeOff } from "react-icons/io5";
+import { useState } from "react";
 
 export default function Basic() {
+    const [eyeChange, setEyeChange] = useState(true) 
     const Redirect = useRouter();
     const {
         register,
@@ -35,7 +38,6 @@ export default function Basic() {
                 Redirect.push('/login')
             },
         });
-        console.log(res, error);
 
     }
 
@@ -59,7 +61,7 @@ export default function Basic() {
                             type="text"
                         >
                             <Label
-                                
+
                                 className="text-white focus:!text-white">Image</Label>
                             <Input placeholder="Enter your Image link" className={`rounded-full`} {...register("image")} />
                         </TextField>
@@ -83,7 +85,7 @@ export default function Basic() {
                             isRequired
                             minLength={6}
                             name="password"
-                            type="password"
+                            type={eyeChange ? 'text' : 'password'}
                             validate={(value) => {
                                 if (value.length < 8) {
                                     return "Password must be at least 8 characters";
@@ -98,7 +100,17 @@ export default function Basic() {
                             }}
                         >
                             <Label className="text-white">Password</Label>
-                            <Input placeholder="Enter your password" className={`rounded-full`} {...register("password")} />
+                            <div className="w-full relative">
+                                <div onClick={() => setEyeChange(!eyeChange)} className="text-white/70 absolute top-0 text-lg right-0 translate-y-1/2 -translate-x-1/2 " >
+                                    {
+                                        eyeChange ? <IoEyeOff /> : <IoEye />
+                                    }
+
+                                </div>
+                                <Input placeholder=" your password" className={`rounded-full w-full`}  {...register("password")} />
+                            </div>
+
+
                             <Description>Must be at least 6 characters with 1 uppercase and 1 number</Description>
                             <FieldError />
                         </TextField>

@@ -23,7 +23,7 @@ const All_Books = () => {
     return (
         <div>
             <div className=' mx-auto w-11/12 py-15  '>
-                <div className='text-3xl grid grid-cols-3  pb-10 font-bold text-white [text-shadow:_2px_2px_4px_#000]'>
+                <div className='text-2xl lg:text-3xl md:text-3xl grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3  pb-10 font-bold text-white [text-shadow:_2px_2px_4px_#000]'>
                     <div className='animate__backInUp text-blue-500/70 justify-self-start'>
                         All books
                     </div>

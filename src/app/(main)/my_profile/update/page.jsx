@@ -9,7 +9,8 @@ import Link from "next/link";
 import { redirect, RedirectType } from "next/navigation";
  
 export default function ModalPage() { 
-   
+
+  
   const {
     register,
     handleSubmit,

@@ -8,9 +8,10 @@ import Image from 'next/image';
 
 const SingleData = () => {
     const { id } = useParams()
+    console.log(id);
+    
     const data = useContext(NameContext)
-    const mainData = data.filter(item => item.id == id);
-    console.log(mainData);
+    const mainData = data.filter(item => item.id == id); 
 
     const { title, author, description, category, available_quantity, discount, image_url } = mainData[0];
 

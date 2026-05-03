@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { authClient } from "@/lib/auth-client"
 import ProfileDetails from './ProfileDetails';
 import SignupBtn from './SignupBtn';
@@ -9,8 +9,13 @@ import { IoMdHome } from 'react-icons/io';
 import { IoBookSharp } from 'react-icons/io5';
 import { CiUser } from 'react-icons/ci';
 import { CoolMode } from '../ui/cool-mode';
+import { usePathname } from 'next/navigation';
 
 const NavBar = () => {
+    const [pathName, setPathname] = useState('')
+    const path = usePathname()
+    console.log(path);
+    
     const { data: session } = authClient.useSession()
     const name = session?.user?.name;
     const image = session?.user?.image;
@@ -81,7 +86,7 @@ const NavBar = () => {
                             }}
                         >
                             <Link href={'/home'} className='flex '>
-                                <li className="hover:text-blue-400 flex items-center gap-1 justify-center  hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
+                                <li className={`${path == '/home' && 'text-blue-400' } hover:text-blue-400 flex items-center gap-1 justify-center  hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10`}>
                                     <IoMdHome />
                                     <p>
                                         Home
@@ -95,7 +100,7 @@ const NavBar = () => {
                             }}
                         >
                             <Link href={'/all_books'} className='flex '>
-                                <li className="hover:text-blue-400 flex items-center gap-1 justify-center hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
+                                <li className={`${path == '/all_books' && 'text-blue-400' } hover:text-blue-400 flex items-center gap-1 justify-center  hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10`}>
                                     <IoBookSharp />
                                     <p>
                                         All Books
@@ -109,7 +114,7 @@ const NavBar = () => {
                             }}
                         >
                             <Link href={'/my_profile'} className='flex '>
-                                <li className="hover:text-blue-400 flex items-center gap-1 justify-center hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
+                                <li className={`${session?.user ? path == '/my_profile' && 'text-blue-400': '' } hover:text-blue-400 flex items-center gap-1 justify-center  hover:shadow hover:shadow-white/[0.2] px-2 py-1   transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10`}>
                                     <CiUser />
                                     <p>
                                         My Profile

@@ -33,9 +33,9 @@ const Footer = () => {
                 <nav>
                     <h1 className="footer-title ">Social Link</h1>
                     <nav className='flex gap-5 '>
-                        <a aria-label='social link facebook' href='https://web.facebook.com/mdmohiburrahmanmanik0/' className="hover:scale-110 duration-75 delay-75 link text-4xl link-hover hover:text-blue-400"><FaFacebookF className='text-[#1877F2]'></FaFacebookF></a>
-                        <a aria-label='social link twitter' href='https://x.com/MohiburMd2288' className="hover:scale-110 duration-75 delay-75 link text-4xl link-hover hover:text-blue-400"><RiTwitterXLine className='text-[#1DA1F2]'></RiTwitterXLine></a>
-                        <a aria-label='social link linkedin' href='https://www.linkedin.com/in/md-mohebur-rahman-monir/' className="hover:scale-110 duration-75 delay-75 link text-4xl link-hover hover:text-blue-400"><FaLinkedin className='text-[#0a66c2]'></FaLinkedin></a>
+                        <a aria-label='social link facebook' href='https://web.facebook.com/mdmohiburrahmanmanik0/' className="hover:scale-110 duration-75 delay-75 link text-2xl link-hover hover:text-blue-400"><FaFacebookF className='text-[#1877F2]'></FaFacebookF></a>
+                        <a aria-label='social link twitter' href='https://x.com/MohiburMd2288' className="hover:scale-110 duration-75 delay-75 link text-2xl link-hover hover:text-blue-400"><RiTwitterXLine className='text-[#1DA1F2]'></RiTwitterXLine></a>
+                        <a aria-label='social link linkedin' href='https://www.linkedin.com/in/md-mohebur-rahman-monir/' className="hover:scale-110 duration-75 delay-75 link text-2xl link-hover hover:text-blue-400"><FaLinkedin className='text-[#0a66c2]'></FaLinkedin></a>
                     </nav>
                 </nav>
                 <form onSubmit={(e) => {
@@ -49,7 +49,7 @@ const Footer = () => {
                     <h6 className="footer-title">Massage us</h6>
                     <fieldset className="w-80">
                         <TextField className="w-full max-w-[280px]" name="email" aria-label='Massage box for user'>
-                            <textarea aria-label="Your Message" className="w-full h-20 border rounded-md border-white/10 p-2" placeholder="Enter your Massage" />
+                            <textarea aria-label="Your Message" className="w-full h-30 border rounded-md border-white/10 p-2" placeholder="Enter your Massage" />
                             <InputGroup className='bg-white/10'>
                                 <InputGroup.Prefix>
                                     <BiEnvelope className="size-4 text-muted" />
