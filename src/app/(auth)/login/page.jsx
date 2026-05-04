@@ -8,11 +8,12 @@ import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 import { IoEyeOff } from "react-icons/io5";
 import { IoEye } from "react-icons/io5";
-import { useState } from "react";
+import { useState } from "react"; 
 
 export default function Basic() {
+    
     const [eyeChange, setEyeChange] = useState(true)
-    const {
+    const { 
         register,
         handleSubmit,
         formState: { errors },

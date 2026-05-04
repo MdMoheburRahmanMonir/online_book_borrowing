@@ -7,17 +7,18 @@ import Link from 'next/link';
 import { InputGroup } from '@heroui/react';
 import { FaSearch } from 'react-icons/fa';
 import Image from 'next/image';
-import { toast } from 'react-toastify';
+import { toast } from 'react-toastify'; 
 
-const All_Books = () => {
-    const [data, setData] = useState([])
+const All_Books = () => { 
     const value = useContext(NameContext)
     const [inputData, setInputData] = useState('');
+    console.log(value);
 
-    const filterData = inputData.toLowerCase() === 'story' ||
-        inputData.toLowerCase() === 'tech' ||
-        inputData.toLowerCase() === 'science' ? value.filter(item => item.category.toLowerCase().includes(inputData.toLowerCase()))
-        : value.filter(item => item.title.toLowerCase().includes(inputData.toLowerCase()));
+    const filterData = inputData === 'Story'
+        || inputData === 'Tech'
+        || inputData === 'Science'
+        ? value.filter(item => (item.category.includes(inputData)))
+        : value.filter(item => (item.title.includes(inputData)));
 
 
     return (
@@ -28,23 +29,25 @@ const All_Books = () => {
                         All books
                     </div>
                     <ul className="hidden text-lg bg-white/6 rounded-full justify-self-center md:flex items-center  gap-2 text-lg font-medium  text-white/[0.6]">
-                        <li onClick={(e) => setInputData(e.target.innerText)} className="hover:text-blue-400 flex bg-white/2 border-white/30 px-4 items-center cursor-pointer gap-1 justify-center  hover:shadow hover:shadow-white/[0.2] transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
+                        <li onClick={(e) => setInputData(e.target.innerText)} className={`${inputData == "Story" && 'text-blue-400'} hover:text-blue-400 flex bg-white/2 border-white/30 px-4 items-center cursor-pointer gap-1 justify-center  hover:shadow hover:shadow-white/[0.2] transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10`}>
                             Story
                         </li>
-                        <li onClick={(e) => setInputData(e.target.innerText)} className="hover:text-blue-400 flex items-center bg-white/2 border-white/30 px-4 cursor-pointer gap-1 justify-center hover:shadow hover:shadow-white/[0.2] transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
+                        <li onClick={(e) => setInputData(e.target.innerText)} className={`${inputData == "Tech" && 'text-blue-400'} hover:text-blue-400 flex bg-white/2 border-white/30 px-4 items-center cursor-pointer gap-1 justify-center  hover:shadow hover:shadow-white/[0.2] transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10`}>
                             Tech
                         </li>
-                        <li onClick={(e) => setInputData(e.target.innerText)} className="hover:text-blue-400 flex items-center bg-white/2 border-white/30 px-4 cursor-pointer gap-1 justify-center hover:shadow hover:shadow-white/[0.2] transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
+                        <li onClick={(e) => setInputData(e.target.innerText)} className={`${inputData == "Science" && 'text-blue-400'} hover:text-blue-400 flex bg-white/2 border-white/30 px-4 items-center cursor-pointer gap-1 justify-center  hover:shadow hover:shadow-white/[0.2] transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10`}>
                             Science
                         </li>
                     </ul>
                     <InputGroup className='bg-white/10 max-w-xl rounded-full justify-self-end'>
-                        <FaSearch className='pl-3 text-2xl text-white'/>
-                        <InputGroup.Input onChange={(e) => setInputData(e.target.value)} aria-label="Email Address, enter your email" className="w-full max-w-[280px]" placeholder="What's on your mind" />
+                        <FaSearch className='pl-3 text-2xl text-white' />
+                        <InputGroup.Input onChange={(e) => (
+                            setInputData(e.target.value)
+                        )} aria-label="Email Address, enter your email" className="w-full max-w-[280px]" placeholder="What's on your mind" />
                     </InputGroup>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
-                    {filterData.map((book, ind) => (
+                <div className={`${filterData.length > 0 ? 'md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'} grid grid-cols-1  gap-10 `}>
+                    {filterData.length > 0 ? filterData.map((book, ind) => (
                         <div key={ind}
                             className="p-6  space-y-5 shadow overflow-hidden shadow-[inset_0_2px_10px_rgba(3,3,3,0.8)] hover:shadow-[inset_0_2px_10px_rgba(3,3,3,1)]  shadow-white/20 rounded-2xl hover:shadow hover:shadow-white/50 transition-transform duration-500 ease-in-out hover:scale-105"
                         >
@@ -52,7 +55,6 @@ const All_Books = () => {
                                 <Image
                                     src={book.image_url}
                                     alt={book.title}
-                                    
                                     className="w-64 h-92 mx-auto hover:scale-105 rounded-r-lg  border-l-[6px] border-l-black/20 shadow-[10px_10px_20px_rgba(0,0,0,0.3)] transition-all duration-500 group-hover:rotate-y-12 group-hover:scale-105 "
                                 />
                             </div>
@@ -63,15 +65,37 @@ const All_Books = () => {
                                 Author: {book.author}
                             </p>
                             <Link href={`/category/${book.id}`} className='w-full animate__bounceIn'>
-                                <button  onClick={() => toast('😀 View Details Selected')} className="backdrop-blur-[2px] shadow w-full p-4 shadow-white/[0.2]     hover:shadow hover:shadow-white/[0.2] px-4 py-1 hover:text-blue-400   transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
+                                <button onClick={() => toast('😀 View Details Selected')} className="backdrop-blur-[2px] shadow w-full p-4 shadow-white/[0.2]     hover:shadow hover:shadow-white/[0.2] px-4 py-1 hover:text-blue-400   transition-all duration-200  rounded-full hover:bg-white/10 hover:backdrop-blur-md  hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]  border border-transparent hover:border-green-500/10">
                                     View Details
                                 </button>
                             </Link>
                         </div>
-                    ))}
+                    )) :
+                        <div className="flex flex-col items-center justify-center py-16 px-6 text-center">
+                            <div className="text-6xl mb-4">📭</div>
+
+                            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+                                No Data Found
+                            </h2>
+
+                            <p className="text-gray-500 max-w-md mb-6">
+                                We couldn’t find any data matching your current filters or search.
+                                Try resetting to view all available content.
+                            </p>
+
+                            <button
+                                onClick={() => (
+                                    setInputData('')
+                                )}
+                                className="px-6 py-3 rounded-2xl bg-black text-white font-medium shadow-md hover:scale-105 transition-all duration-200"
+                            >
+                                Reset
+                            </button>
+                        </div>
+                    }
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

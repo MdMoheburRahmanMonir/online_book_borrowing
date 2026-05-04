@@ -127,7 +127,7 @@ const NavBar = () => {
 
                 <div className='justify-self-end'>
                     {
-                        session ? <ProfileDetails image={image} name={name} /> : <SignupBtn />
+                        session ? <ProfileDetails image={image} name={name} /> : <SignupBtn path={path} />
                     }
                 </div>
             </nav>
